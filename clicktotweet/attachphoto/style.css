@@ -1,0 +1,24 @@
+body {
+	max-width: 90%;
+	margin: 0 auto;
+	font-family: 'Open Sans', sans-serif;
+	font-weight: 400;
+}
+img {
+	width: 100%;
+}
+li {
+	margin-top: 2.5em;
+}
+h1 {
+	font-size: 1.5em;
+	font-weight: 600;
+}
+footer {
+	font-size: .95rem;
+	margin-top: 4em;
+}
+.c {
+	color: #F62459;
+	text-decoration: none;
+}

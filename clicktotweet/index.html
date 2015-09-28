@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+		<title>Click to Tweet</title>
+
+		<meta name="description" content="">
+		<meta name="HandheldFriendly" content="True">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<link href='https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300,700,300italic' rel='stylesheet'>
+		<link rel="stylesheet" href="style.css">
+	</head>
+
+	<body>
+		<header class="header">
+			<h1>Generate Click-to-Tweet Links</h1>
+			<h2>A <span>superbly</span> basic tool for generating "tweet this" links. Supports <a class="info" title="Click to find out how" onclick="showInfo()">tweets with images</a> too!</h2>
+		</header>
+
+		<main class="main">
+			<form id="clickToTweet">
+				<fieldset>
+					<label for="message">Paste/write your message to tweet:</label><br>
+					<textarea id="message" autofocus maxlength="140" rows="4"></textarea><br>
+					<button id="addPhoto" type="button" onclick="addImg()">&#128247;</button>
+					<input id="generate" type="button" value="Generate link" onclick="generateLink()"><br>
+					<p id="status">&#128170; Ready</p>
+					<label for="link">Here's your link:</label><br>
+					<textarea readonly id="link"></textarea><br>
+					<input type="button" value="Select all" onclick="selectAll()" class="select">
+					<i id="preview"></i><br>
+					<div>
+						<p class="clearAll"><a onclick="clearAll()">Clear fields</a></p>
+					</div>
+				</fieldset>
+			</form>
+		</main>
+
+		<script src="script.js"></script>
+		<script async src="https://platform.twitter.com/widgets.js"></script>
+	</body>
+</html>

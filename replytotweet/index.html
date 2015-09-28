@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+		<title>Create links to pre-filled Twitter replies - by Chaque</title>
+
+		<meta name="description" content="A simple tool to generate a link to a pre-filled Twitter reply">
+		<meta name="HandheldFriendly" content="True">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+		<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:400,800">
+		<link rel="stylesheet" href="style.css">
+	</head>
+
+	<body>
+		<header>
+			<h1>Generate links to pre-filled Twitter replies</h1>
+		</header>
+
+		<main class="wrapper">
+			<form id="prefill">
+				<fieldset>
+					<label for="link">Link to tweet:</label>
+					<input id="link" placeholder="https://twitter.com/theranos/status/618784239530610688" autofocus><br>
+					<label for="reply">Your reply:<label>
+					<textarea id="reply" maxlength="140" placeholder="That's awesome! #healthcare"></textarea><br>
+					<input type="button" id="submit" value="Create link" onclick="doThis()"><br>
+					<p><a onclick="clearFields()">Reset</a></p>
+				</fieldset>
+				<fieldset>
+					<label for="result">Result:</label>
+					<textarea readonly id="result"></textarea><br>
+					<input type="button" id="select" value="Select all" onclick="selectAll()">
+					<p id="preview"></p>
+				</fieldset>
+			</form>
+		</main>
+
+		<script>
+		function doThis() {
+			var link = document.getElementById("link");
+			var statusId =  link.value;
+			statusId = statusId.slice(-18);
+
+			var reply = document.getElementById("reply");
+			var userReply = reply.value;
+			userReply = encodeURIComponent(reply.value);
+
+			var webIntent = "https://twitter.com/intent/tweet?in_reply_to=";
+			var newLink = webIntent + statusId + "&text=" + userReply;
+
+			document.getElementById("result").innerHTML = newLink;
+			document.getElementById("preview").innerHTML = '<a href="' + newLink + '"' + '>Preview</a>';
+		}
+
+		function selectAll() {
+			document.getElementById("result").select();
+		}
+
+		function clearFields() {
+			document.getElementById("prefill").reset();
+			document.getElementById("result").innerHTML = '';
+			document.getElementById("preview").innerHTML = '';
+		}
+		</script>
+		<script async src="https://platform.twitter.com/widgets.js"></script>
+	</body>
+</html>

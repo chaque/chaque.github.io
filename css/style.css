@@ -1,0 +1,68 @@
+html {
+	text-align: center;
+	border-top: 4px solid #F62459;
+	font-weight: 400;
+}
+a {
+	color: #F62459;
+	text-decoration: none;
+}
+html, .main button {
+	font-family: 'Arvo', serif;
+}
+.header {
+	margin-top: 2em;
+}
+.header img {
+	max-width: 150px;
+	max-height: 150px;
+	border-radius: 50%;
+}
+.header h1 {
+	font-family: 'Playfair Display', serif;
+	font-weight: 900;
+	font-style: italic;
+}
+.header h1 a {
+	color: #000;
+}
+.header h2 {
+	text-transform: uppercase;
+	font-size: 1.25em;
+	font-weight: 700;
+}
+.header img,
+.header h1,
+.header h2 {
+	margin: 0;
+}
+.main {
+	max-width: 360px;
+	margin: 0 auto;
+	margin-top: 3em;
+	margin-bottom: 8%;
+}
+.main a {
+	font-size: 1.5em;
+	padding: 0.5em;
+	border: 3px solid #F62459;
+	background: #fff;
+}
+.main a:hover {
+	background: #F62459;
+	color: #fff;
+}
+.footer p {
+	font-size: 0.5em;
+	margin: 0;
+}
+#key {
+	width: 347px;
+	height: 150px;
+	border: 3px solid #ccc;
+	overflow: auto;
+	margin-top: 1em;
+}
+#key:focus {
+	outline: none;
+}

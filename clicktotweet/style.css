@@ -1,0 +1,135 @@
+/*general*/
+* {
+	margin: 0;
+	font-family: 'Open Sans Condensed', sans-serif;
+	font-weight: 300;
+
+}
+html {
+	text-align: center;
+}
+a {
+	text-decoration: none;
+}
+span {
+	font-style: italic;
+}
+
+/*header*/
+h1 {
+	font-weight: 700;
+	margin-top: 2.5rem;
+	color: #F89406;
+}
+h2 {
+	margin-bottom: 1em;
+	font-size: 1.25rem;
+}
+.header {
+	max-width: 95%;
+}
+.info {
+	font-style: normal;
+	border-bottom: 1px dotted blue;
+	color: blue;
+}
+#status {
+	line-height: 2em;
+	color: #6C7A89;;
+	margin-bottom: 1rem;
+}
+
+/*main*/
+.main div {
+	margin-top: 1em;
+}
+.main div p a {
+	font-size: 1.15rem;
+}
+.main {
+	max-width: 600px;
+	margin-top: 1em;
+	font-size: 1.25rem;
+}
+
+/*form*/
+fieldset {
+	border:none;
+}
+form textarea {
+	width: 100%;
+	margin: 0.5em 0 0.5em 0;
+}
+#generate {
+	margin-bottom: .5rem;
+}
+
+/*buttons*/
+input[type="button"]:not(.select), #addPhoto {
+	font-size: 1rem;
+	border: none;
+	border-radius: 3px;
+	background: #F89406;
+	color: #fff;
+	padding: 0.55em 0.85em;
+}
+input[type="button"]:hover:not(.select) {
+	background: #E67E22;
+}
+.main button[type="button"] a, .select {
+	color: #F89406;
+	font-weight: 700;
+}
+.select, button[type="button"] {
+	padding: 0.15rem 0.4rem;
+	border: 1px solid #F89406;
+	background: #fff;
+	text-transform: uppercase;
+	border-radius: 3px;
+	font-size: 1.25rem;
+}
+#addPhoto {
+	padding: 0.55em 0.65em;
+	background: #eee;
+	color: #F89406;
+}
+.clearAll {
+	max-width: 120px;
+	color: #6C7A89;
+	background: #eee;
+	border-radius: 3px;
+	border-color: #F89406;
+	padding-top: 2px;
+	padding-bottom: 6px;
+	text-transform: uppercase;
+}
+.clearAll a {
+	font-weight: 700;
+}
+
+/*footer*/
+.footer {
+	font-size: 0.85rem;
+	margin-top: 3rem;
+}
+.footer img {
+	height: 18px;
+	margin: .25rem 0 .5rem 0;
+}
+.footer .c{
+	color: #F62459;
+}
+
+/*DRY*/
+.header, .clearAll, .main {
+	margin: 0 auto;
+}
+#message, #link, #status {
+	font-family: monospace;
+}
+.info:hover,
+#addPhoto:hover,
+fieldset p:not(#status):hover,
+input[type="button"] {
+	cursor: pointer;
+}

@@ -1,0 +1,76 @@
+* {
+	margin: 0;
+	font-family: 'Open Sans', sans-serif;
+}
+html, body {
+	height: 100%;
+	width: 100%;
+}
+header {
+	padding: 1em;
+}
+h1 {
+	font-size: 1.5rem;
+}
+h1, .footer p {
+	text-align: center;
+}
+form input, form textarea {
+	width: 100%;
+	margin: 0.5em 0 1.25em 0;
+}
+input[type="button"] {
+	width: 30%;
+	margin: 0 35% 0 35%;
+	padding: 0.75em 0.5em;
+	font-size: 0.8rem;
+	border: none;
+	border-radius: 5px;
+	background: #55aace;
+	color: #fff;
+}
+input[type="button"]:hover,
+input[type="button"]:active,
+input[type="button"]:focus {
+	background: #1E8BC3;
+}
+a {
+	text-decoration: none;
+}
+.wrapper {
+	max-width: 615px;
+	margin: 0 auto;
+}
+.footer {
+	font-size: 0.6em;
+	padding-top: 2.5em;
+}
+#reply {
+	height: 5em;
+}
+#result {
+	height: 3em;
+}
+#prefill fieldset {
+	border: none;
+}
+#prefill p {
+	font-size: 0.8rem;
+	text-align: center;
+	margin-top: 0.75em;
+	text-decoration: underline;
+}
+#prefill p:hover,
+input[type="button"] {
+	cursor: pointer;
+}
+#prefill a,
+#prefill a:active,
+#prefill a:visited,
+#prefill a:focus {
+	color: #1E8BC3;
+	text-decoration: none;
+}
+#prefill a:hover {
+	color: #55aace;
+}
