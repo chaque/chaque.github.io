@@ -1,4 +1,5 @@
 function generateLink() {
+	document.getElementById("status").style.display="none";
 	document.getElementById("hihi").style.visibility="visible";
 	var buffer = "https://buffer.com/add?";
 	var mediaURL = document.getElementById("media").value;
@@ -33,7 +34,6 @@ if (message.length > 0) {
 			document.getElementById("status").style.color="#fff";
 			document.getElementById("status").style.display="block";
 			document.getElementById("hihi").style.visibility="hidden";
-			document.getElementById("reset").style.visibility="visible";
 
 		}
 	} else if(hasURL == true) {
