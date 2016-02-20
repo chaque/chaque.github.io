@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+		<title>Create One-Click Buffer-It Links</title>
+
+		<meta name="description" content="Your most basic tool for generating one-click Buffer-it! links. Made for EC by Chaque.">
+		<meta name="HandheldFriendly" content="True">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<link href='https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,700' rel='stylesheet' type='text/css'>
+		<link rel="stylesheet" href="css/style.css">
+	</head>
+
+	<body>
+		
+		<header class="header">
+			<h1>Generate One-Click Buffer-It Links</h1>
+		</header>
+
+		<main class="main">
+			<form class="form">
+				<label for="message">Paste your message below:</label><br>
+				<textarea id="message" autofocus rows="7" cols="50" placeholder="Check this out! http://bit.ly/1OiAsDA"></textarea><br>
+				<label for="media">Paste link to media (limited to youtu.be or pic.twitter):</label><br>
+				<input type="text" id="media" placeholder="(optional)">
+				<input type="button" value="&#63;" onclick="deets()" id="q">
+				<button id="hide">Hide</button>
+				<div id="status"></div>
+				<input id="generate" type="button" value="Generate" onclick="generateLink()"><br>
+				<label for="finalLink">Here's your one-click Buffer-it! link:</label><br>
+				<textarea id="finalLink" readonly rows="6" cols="30"></textarea><br>
+				<input type="reset" value="Reset" onclick="reset()" id="reset">
+			</form>
+		</main>
+
+
+		<footer class="footer">
+			<p>&copy; 2016 by <a href="mailto:hello@christinevalena.com">@chaque_co</a></p>
+		</footer>
+
+		<script src="js/generate.js"></script>
+		<script>
+			function deets() {
+				document.getElementById("status").innerHTML = "Use the following format if you want to insert media from Twitter or Youtube:<br>pic.twitter.com/Yl89HMaTCP<br>https://youtu.be/ZAqj3JWSN8M";
+				document.getElementById("hide").style.display = "inline";
+				document.getElementById("status").style.padding = "1rem";
+				document.getElementById("status").style.background = "#eee";
+				document.getElementById("status").style.margin = "0 0 .4rem 0";
+			}
+		</script>
+	</body>
+</html>
