@@ -29,12 +29,7 @@ if (message.length > 0) {
 				document.getElementById("finalLink").select();
 			}
 		} else {
-			document.getElementById("status").innerHTML="Invalid media URL. Please try again.";
-			document.getElementById("status").style.color="#fff";
-			document.getElementById("status").style.display="block";
-			document.getElementById("hihi").style.visibility="hidden";
-			document.getElementById("reset").style.visibility="visible";
-
+			alert("Invalid media URL. Please try again.")
 		}
 	} else if(hasURL == true) {
 		if(hasSpace == true) {
@@ -54,9 +49,15 @@ if (message.length > 0) {
 
 } else {
 	document.getElementById("message").placeholder="Paste some text here";
-	document.getElementById("hihi").style.visibility="hidden";
 	}
 
 }
 
+function preV() {
+	window.open(document.getElementById("finalLink").value, "_blank", "toolbar=no, scrollbars=no, resizable=no, top=100, left=600%, width=700, height=500");
 
+	if (window.focus) {
+		newWindow.focus();
+	}
+	
+}

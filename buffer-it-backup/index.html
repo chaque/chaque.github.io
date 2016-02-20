@@ -16,7 +16,7 @@
 	<body>
 		
 		<header class="header">
-			<h1 id="main-h1">Generate One-Click Buffer-It Links</h1>
+			<h1>Generate One-Click Buffer-It Links</h1>
 		</header>
 
 		<main class="main">
@@ -33,7 +33,7 @@
 				<div id="hihi">
 					<label for="finalLink">Here's your one-click Buffer-it! link:</label><br>
 					<textarea id="finalLink" readonly rows="2" cols="50"></textarea><br>
-					<input type="reset" value="Reset &#8634;" onclick="resetAll()" id="reset" title="Closes preview window">
+					<input type="reset" value="Reset &#8634;" onclick="reset()" id="reset">
 					<input type="button" value="Select All &#x2702;" onclick="selectAll()" id="select">
 					<input type="button" value="Preview &#8605;" onclick="preV()" id="preview">
 				</div>
@@ -48,7 +48,6 @@
 
 		<script src="js/etc.js"></script>
 		<script src="js/generate.js"></script>
-		<script src="js/more.js"></script>
 		
 	</body>
 </html>
