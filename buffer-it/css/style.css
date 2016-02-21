@@ -1,5 +1,35 @@
+* {
+  margin: 0;
+}
+html, body {
+  height: 100%;
+}
+.page-wrap {
+  min-height: 100%;
+  margin-bottom: -3rem;
+}
+.page-wrap:after {
+  content: "";
+  display: block;
+}
+.footer, .page-wrap:after {
+  height: 3rem; 
+}
+.footer {
+	text-align: center;
+}
+
+
+
+
+
+
+
+
+
+
+
 html {
-	height: 100vh;
 
 
 
@@ -15,15 +45,18 @@ background: linear-gradient(to left, #1A2980 , #26D0CE); /* W3C, IE 10+/ Edge, F
 body {
 	font-family: 'Source Sans Pro', sans-serif;
 	color: #fff;
-	max-width: 80%;
-	margin-left: 3.5%;
+}
+
+#main-h1 {
+	padding: 3% 0 0 5%;
+}
+.main {
+	padding: 1rem 0 0 5%;
 }
 form {
 	max-width: 600px;
 }
-form #message, form #finalLink {
-	max-width: 100%;
-}
+
 .form > textarea, .form > input:not(#q), .form > input:not(#hide) {
 	margin: .3rem 0 0.75rem 0;
 }
@@ -79,15 +112,38 @@ input[type="button"]:hover, button:hover, #reset, #select, #preview {
 }
 .footer p {
 	font-size: .75rem;
-	margin-top: 8%;
 }
 .footer a {
 	color: #F62459;
 	text-decoration: none;
 }
 .footer span a{
-	font-size: 2rem;
+	font-size: 1.5rem;
+	color: #C8F7C5;
+
+}
+.footer span a:hover {
+	color:#F62459;
+
 }
 #hihi {
 	visibility: hidden;
+}
+
+
+
+
+
+@media only screen and (max-width: 600px) {
+	form #message, form #finalLink {
+	max-width: 95%;
+}
+	#status {
+		max-width: 300px;
+	}
+}
+@media only screen and (max-width: 400px) {
+	#status {
+		max-width: 80%;
+	}
 }
